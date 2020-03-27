@@ -1,32 +1,46 @@
 {
-  "name": "mercadolibre",
-  "version": "0.0.14",
-  "author": "Florencia Solari <fsolari90@gmail.com>",
-  "description": "Mercadolibre SDK module for integration",
-  "main": "./index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mercadolibre/MercadoLibreNode.git"
-  },
-  "keywords": [
-    "api",
-    "mercadolibre",
-    "meli",
-    "sdk",
-    "integration"
-  ],
-  "dependencies": {
-    "ejs": "^2.5.6",
-    "express": "^4.16.2",
-    "express-session": "^1.15.6",
-    "needle": "^0.11.0",
-    "request": "^2.83.0"
-  },
-  "engine": {
-    "node": ">=0.6"
-  },
+  "name": "meli_markeplace_sdk",
+  "version": "0.0.9",
+  "description": "This_is_a_the_codebase_to_generate_a_SDK_for_Open_Platform_Marketplace",
+  "license": "Unlicense",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node app.js"
+    "build": "babel src -d dist",
+    "prepack": "npm run build",
+    "test": "mocha --require @babel/register --recursive"
   },
-  "license": "MIT"
+  "browser": {
+    "fs": false
+  },
+  "dependencies": {
+    "@babel/cli": "^7.0.0",
+    "superagent": "3.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-do-expressions": "^7.0.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-export-namespace-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.0.0",
+    "@babel/plugin-proposal-function-sent": "^7.0.0",
+    "@babel/plugin-proposal-json-strings": "^7.0.0",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.0.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.0.0",
+    "@babel/plugin-proposal-numeric-separator": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0",
+    "@babel/plugin-proposal-throw-expressions": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^5.2.0",
+    "sinon": "^7.2.0"
+  },
+  "files": [
+    "dist"
+  ]
 }
