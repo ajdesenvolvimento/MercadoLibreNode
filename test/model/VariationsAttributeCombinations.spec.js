@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new meli.ItemPictures();
+    instance = new meli.VariationsAttributeCombinations();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,28 @@
       object[property] = value;
   }
 
-  describe('ItemPictures', function() {
-    it('should create an instance of ItemPictures', function() {
-      // uncomment below and update the code to test ItemPictures
-      //var instane = new meli.ItemPictures();
-      //expect(instance).to.be.a(meli.ItemPictures);
+  describe('VariationsAttributeCombinations', function() {
+    it('should create an instance of VariationsAttributeCombinations', function() {
+      // uncomment below and update the code to test VariationsAttributeCombinations
+      //var instane = new meli.VariationsAttributeCombinations();
+      //expect(instance).to.be.a(meli.VariationsAttributeCombinations);
     });
 
-    it('should have the property source (base name: "source")', function() {
-      // uncomment below and update the code to test the property source
-      //var instane = new meli.ItemPictures();
+    it('should have the property name (base name: "name")', function() {
+      // uncomment below and update the code to test the property name
+      //var instane = new meli.VariationsAttributeCombinations();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property valueId (base name: "value_id")', function() {
+      // uncomment below and update the code to test the property valueId
+      //var instane = new meli.VariationsAttributeCombinations();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property valueName (base name: "value_name")', function() {
+      // uncomment below and update the code to test the property valueName
+      //var instane = new meli.VariationsAttributeCombinations();
       //expect(instance).to.be();
     });
 

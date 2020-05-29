@@ -1,4 +1,4 @@
-# MeliMarkeplaceSdk.Token
+# meli.Token
 
 ## Properties
 

@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new meli.ItemPictures();
+    instance = new meli.AttributesValueStruct();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,22 @@
       object[property] = value;
   }
 
-  describe('ItemPictures', function() {
-    it('should create an instance of ItemPictures', function() {
-      // uncomment below and update the code to test ItemPictures
-      //var instane = new meli.ItemPictures();
-      //expect(instance).to.be.a(meli.ItemPictures);
+  describe('AttributesValueStruct', function() {
+    it('should create an instance of AttributesValueStruct', function() {
+      // uncomment below and update the code to test AttributesValueStruct
+      //var instane = new meli.AttributesValueStruct();
+      //expect(instance).to.be.a(meli.AttributesValueStruct);
     });
 
-    it('should have the property source (base name: "source")', function() {
-      // uncomment below and update the code to test the property source
-      //var instane = new meli.ItemPictures();
+    it('should have the property _number (base name: "number")', function() {
+      // uncomment below and update the code to test the property _number
+      //var instane = new meli.AttributesValueStruct();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property unit (base name: "unit")', function() {
+      // uncomment below and update the code to test the property unit
+      //var instane = new meli.AttributesValueStruct();
       //expect(instance).to.be();
     });
 

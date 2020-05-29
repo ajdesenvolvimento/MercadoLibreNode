@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new meli.ItemPictures();
+    instance = new meli.ItemsHealthApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,19 +47,37 @@
       object[property] = value;
   }
 
-  describe('ItemPictures', function() {
-    it('should create an instance of ItemPictures', function() {
-      // uncomment below and update the code to test ItemPictures
-      //var instane = new meli.ItemPictures();
-      //expect(instance).to.be.a(meli.ItemPictures);
+  describe('ItemsHealthApi', function() {
+    describe('itemsIdHealthActionsGet', function() {
+      it('should call itemsIdHealthActionsGet successfully', function(done) {
+        //uncomment below and update the code to test itemsIdHealthActionsGet
+        //instance.itemsIdHealthActionsGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
-    it('should have the property source (base name: "source")', function() {
-      // uncomment below and update the code to test the property source
-      //var instane = new meli.ItemPictures();
-      //expect(instance).to.be();
+    describe('itemsIdHealthGet', function() {
+      it('should call itemsIdHealthGet successfully', function(done) {
+        //uncomment below and update the code to test itemsIdHealthGet
+        //instance.itemsIdHealthGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
+    describe('sitesSiteIdHealthLevelsGet', function() {
+      it('should call sitesSiteIdHealthLevelsGet successfully', function(done) {
+        //uncomment below and update the code to test sitesSiteIdHealthLevelsGet
+        //instance.sitesSiteIdHealthLevelsGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

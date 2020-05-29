@@ -1,7 +1,7 @@
 {
-  "name": "meli_markeplace_sdk",
-  "version": "0.0.9",
-  "description": "This_is_a_the_codebase_to_generate_a_SDK_for_Open_Platform_Marketplace",
+  "name": "mercadolibre-nodejs-sdk",
+  "version": "0.0.18",
+  "description": "This is the official NodeJS SDK for the MercadoLibre Marketplace platform.",
   "license": "Unlicense",
   "main": "dist/index.js",
   "scripts": {

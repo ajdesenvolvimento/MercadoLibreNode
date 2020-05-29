@@ -1,4 +1,4 @@
-# MeliMarkeplaceSdk.Item
+# meli.Item
 
 ## Properties
 
@@ -16,5 +16,7 @@ Name | Type | Description | Notes
 **videoId** | **String** |  | 
 **warranty** | **String** |  | 
 **pictures** | [**[ItemPictures]**](ItemPictures.md) |  | 
+**attributes** | [**[Attributes]**](Attributes.md) |  | [optional] 
+**variations** | [**[Variations]**](Variations.md) |  | [optional] 
 
 

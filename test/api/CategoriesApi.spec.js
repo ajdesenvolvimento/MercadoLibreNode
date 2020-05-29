@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new meli.ItemPictures();
+    instance = new meli.CategoriesApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,19 +47,37 @@
       object[property] = value;
   }
 
-  describe('ItemPictures', function() {
-    it('should create an instance of ItemPictures', function() {
-      // uncomment below and update the code to test ItemPictures
-      //var instane = new meli.ItemPictures();
-      //expect(instance).to.be.a(meli.ItemPictures);
+  describe('CategoriesApi', function() {
+    describe('categoriesCategoryIdGet', function() {
+      it('should call categoriesCategoryIdGet successfully', function(done) {
+        //uncomment below and update the code to test categoriesCategoryIdGet
+        //instance.categoriesCategoryIdGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
-    it('should have the property source (base name: "source")', function() {
-      // uncomment below and update the code to test the property source
-      //var instane = new meli.ItemPictures();
-      //expect(instance).to.be();
+    describe('sitesSiteIdCategoriesGet', function() {
+      it('should call sitesSiteIdCategoriesGet successfully', function(done) {
+        //uncomment below and update the code to test sitesSiteIdCategoriesGet
+        //instance.sitesSiteIdCategoriesGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
     });
-
+    describe('sitesSiteIdDomainDiscoverySearchGet', function() {
+      it('should call sitesSiteIdDomainDiscoverySearchGet successfully', function(done) {
+        //uncomment below and update the code to test sitesSiteIdDomainDiscoverySearchGet
+        //instance.sitesSiteIdDomainDiscoverySearchGet(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

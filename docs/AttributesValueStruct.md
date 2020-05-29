@@ -1,9 +1,10 @@
-# MeliMarkeplaceSdk.ItemsPictures
+# meli.AttributesValueStruct
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**source** | **String** |  | [optional] 
+**_number** | **Number** |  | [optional] 
+**unit** | **String** |  | [optional] 
 
 

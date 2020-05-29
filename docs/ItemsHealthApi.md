@@ -1,29 +1,30 @@
-# meli.ItemsApi
+# meli.ItemsHealthApi
 
 All URIs are relative to *https://api.mercadolibre.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**itemsIdGet**](ItemsApi.md#itemsIdGet) | **GET** /items/{id} | Return a Item.
-[**itemsIdPut**](ItemsApi.md#itemsIdPut) | **PUT** /items/{id} | Update a Item.
-[**itemsPost**](ItemsApi.md#itemsPost) | **POST** /items | Create a Item.
+[**itemsIdHealthActionsGet**](ItemsHealthApi.md#itemsIdHealthActionsGet) | **GET** /items/{id}/health/actions | Return item health actions by id.
+[**itemsIdHealthGet**](ItemsHealthApi.md#itemsIdHealthGet) | **GET** /items/{id}/health | Return health by id.
+[**sitesSiteIdHealthLevelsGet**](ItemsHealthApi.md#sitesSiteIdHealthLevelsGet) | **GET** /sites/{site_id}/health_levels | Return health levels.
 
 
 
-## itemsIdGet
+## itemsIdHealthActionsGet
 
-> itemsIdGet(id)
+> itemsIdHealthActionsGet(id, accessToken)
 
-Return a Item.
+Return item health actions by id.
 
 ### Example
 
 ```javascript
 import meli from 'mercadolibre-nodejs-sdk';
 
-let apiInstance = new meli.ItemsApi();
+let apiInstance = new meli.ItemsHealthApi();
 let id = "id_example"; // String | 
-apiInstance.itemsIdGet(id, (error, data, response) => {
+let accessToken = "accessToken_example"; // String | 
+apiInstance.itemsIdHealthActionsGet(id, accessToken, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -38,6 +39,7 @@ apiInstance.itemsIdGet(id, (error, data, response) => {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
+ **accessToken** | **String**|  | 
 
 ### Return type
 
@@ -53,26 +55,21 @@ No authorization required
 - **Accept**: Not defined
 
 
-## itemsIdPut
+## itemsIdHealthGet
 
-> itemsIdPut(id, accessToken, item)
+> itemsIdHealthGet(id, accessToken)
 
-Update a Item.
+Return health by id.
 
 ### Example
 
 ```javascript
 import meli from 'mercadolibre-nodejs-sdk';
-let defaultClient = meli.ApiClient.instance;
-// Configure OAuth2 access token for authorization: oAuth2AuthCode
-let oAuth2AuthCode = defaultClient.authentications['oAuth2AuthCode'];
-oAuth2AuthCode.accessToken = 'YOUR ACCESS TOKEN';
 
-let apiInstance = new meli.ItemsApi();
+let apiInstance = new meli.ItemsHealthApi();
 let id = "id_example"; // String | 
 let accessToken = "accessToken_example"; // String | 
-let item = new meli.Item(); // Item | 
-apiInstance.itemsIdPut(id, accessToken, item, (error, data, response) => {
+apiInstance.itemsIdHealthGet(id, accessToken, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -88,7 +85,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
  **accessToken** | **String**|  | 
- **item** | [**Item**](Item.md)|  | 
 
 ### Return type
 
@@ -96,33 +92,28 @@ null (empty response body)
 
 ### Authorization
 
-[oAuth2AuthCode](../README.md#oAuth2AuthCode)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not defined
 - **Accept**: Not defined
 
 
-## itemsPost
+## sitesSiteIdHealthLevelsGet
 
-> itemsPost(accessToken, item)
+> sitesSiteIdHealthLevelsGet(siteId)
 
-Create a Item.
+Return health levels.
 
 ### Example
 
 ```javascript
 import meli from 'mercadolibre-nodejs-sdk';
-let defaultClient = meli.ApiClient.instance;
-// Configure OAuth2 access token for authorization: oAuth2AuthCode
-let oAuth2AuthCode = defaultClient.authentications['oAuth2AuthCode'];
-oAuth2AuthCode.accessToken = 'YOUR ACCESS TOKEN';
 
-let apiInstance = new meli.ItemsApi();
-let accessToken = "accessToken_example"; // String | 
-let item = new meli.Item(); // Item | 
-apiInstance.itemsPost(accessToken, item, (error, data, response) => {
+let apiInstance = new meli.ItemsHealthApi();
+let siteId = "siteId_example"; // String | 
+apiInstance.sitesSiteIdHealthLevelsGet(siteId, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -136,8 +127,7 @@ apiInstance.itemsPost(accessToken, item, (error, data, response) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **accessToken** | **String**|  | 
- **item** | [**Item**](Item.md)|  | 
+ **siteId** | **String**|  | 
 
 ### Return type
 
@@ -145,10 +135,10 @@ null (empty response body)
 
 ### Authorization
 
-[oAuth2AuthCode](../README.md#oAuth2AuthCode)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not defined
 - **Accept**: Not defined
 

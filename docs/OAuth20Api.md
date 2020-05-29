@@ -1,4 +1,4 @@
-# MeliMarkeplaceSdk.OAuth20Api
+# meli.OAuth20Api
 
 All URIs are relative to *https://api.mercadolibre.com*
 
@@ -18,9 +18,9 @@ Authentication Endpoint
 ### Example
 
 ```javascript
-import MeliMarkeplaceSdk from 'meli_markeplace_sdk';
+import meli from 'mercadolibre-nodejs-sdk';
 
-let apiInstance = new MeliMarkeplaceSdk.OAuth20Api();
+let apiInstance = new meli.OAuth20Api();
 let responseType = "'code'"; // String | 
 let clientId = "clientId_example"; // String | 
 let redirectUri = "redirectUri_example"; // String | 
@@ -58,7 +58,7 @@ No authorization required
 
 ## getToken
 
-> Token getToken(grantType, clientId, clientSecret, redirectUri, code)
+> Token getToken(grantType, clientId, clientSecret, redirectUri, opts)
 
 Request Access Token
 
@@ -67,15 +67,18 @@ Partner makes a request to the token endpoint by adding the following parameters
 ### Example
 
 ```javascript
-import MeliMarkeplaceSdk from 'meli_markeplace_sdk';
+import meli from 'mercadolibre-nodejs-sdk';
 
-let apiInstance = new MeliMarkeplaceSdk.OAuth20Api();
-let grantType = "grantType_example"; // String | Value MUST be set to \"authorization_code\"
+let apiInstance = new meli.OAuth20Api();
+let grantType = "'authorization_code'"; // String | Value MUST be set to \"authorization_code\"
 let clientId = "clientId_example"; // String | 
 let clientSecret = "clientSecret_example"; // String | 
 let redirectUri = "redirectUri_example"; // String | 
-let code = "code_example"; // String | The code received in the query string when redirected from authorization page 
-apiInstance.getToken(grantType, clientId, clientSecret, redirectUri, code, (error, data, response) => {
+let opts = {
+  'code': "code_example", // String | The code received in the query string when redirected from authorization page 
+  'refreshToken': "refreshToken_example" // String | The refresh_token received in the query string when redirected from authorization page 
+};
+apiInstance.getToken(grantType, clientId, clientSecret, redirectUri, opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -89,11 +92,12 @@ apiInstance.getToken(grantType, clientId, clientSecret, redirectUri, code, (erro
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **grantType** | **String**| Value MUST be set to \&quot;authorization_code\&quot; | 
+ **grantType** | **String**| Value MUST be set to \&quot;authorization_code\&quot; | [default to &#39;authorization_code&#39;]
  **clientId** | **String**|  | 
  **clientSecret** | **String**|  | 
  **redirectUri** | **String**|  | 
- **code** | **String**| The code received in the query string when redirected from authorization page  | 
+ **code** | **String**| The code received in the query string when redirected from authorization page  | [optional] 
+ **refreshToken** | **String**| The refresh_token received in the query string when redirected from authorization page  | [optional] 
 
 ### Return type
 

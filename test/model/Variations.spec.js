@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new meli.Token();
+    instance = new meli.Variations();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,46 +47,40 @@
       object[property] = value;
   }
 
-  describe('Token', function() {
-    it('should create an instance of Token', function() {
-      // uncomment below and update the code to test Token
-      //var instane = new meli.Token();
-      //expect(instance).to.be.a(meli.Token);
+  describe('Variations', function() {
+    it('should create an instance of Variations', function() {
+      // uncomment below and update the code to test Variations
+      //var instane = new meli.Variations();
+      //expect(instance).to.be.a(meli.Variations);
     });
 
-    it('should have the property accessToken (base name: "access_token")', function() {
-      // uncomment below and update the code to test the property accessToken
-      //var instane = new meli.Token();
+    it('should have the property price (base name: "price")', function() {
+      // uncomment below and update the code to test the property price
+      //var instane = new meli.Variations();
       //expect(instance).to.be();
     });
 
-    it('should have the property tokenType (base name: "token_type")', function() {
-      // uncomment below and update the code to test the property tokenType
-      //var instane = new meli.Token();
+    it('should have the property attributeCombinations (base name: "attribute_combinations")', function() {
+      // uncomment below and update the code to test the property attributeCombinations
+      //var instane = new meli.Variations();
       //expect(instance).to.be();
     });
 
-    it('should have the property expiresIn (base name: "expires_in")', function() {
-      // uncomment below and update the code to test the property expiresIn
-      //var instane = new meli.Token();
+    it('should have the property availableQuantity (base name: "available_quantity")', function() {
+      // uncomment below and update the code to test the property availableQuantity
+      //var instane = new meli.Variations();
       //expect(instance).to.be();
     });
 
-    it('should have the property scope (base name: "scope")', function() {
-      // uncomment below and update the code to test the property scope
-      //var instane = new meli.Token();
+    it('should have the property soldQuantity (base name: "sold_quantity")', function() {
+      // uncomment below and update the code to test the property soldQuantity
+      //var instane = new meli.Variations();
       //expect(instance).to.be();
     });
 
-    it('should have the property userId (base name: "user_id")', function() {
-      // uncomment below and update the code to test the property userId
-      //var instane = new meli.Token();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property refreshToken (base name: "refresh_token")', function() {
-      // uncomment below and update the code to test the property refreshToken
-      //var instane = new meli.Token();
+    it('should have the property pictureIds (base name: "picture_ids")', function() {
+      // uncomment below and update the code to test the property pictureIds
+      //var instane = new meli.Variations();
       //expect(instance).to.be();
     });
 
